@@ -1,0 +1,21 @@
+.wrapper {
+  background: var(--color-base);
+  .inner {
+    width: var(--w-contents);
+    padding: 0 0 var(--space-3);
+    margin: 0 auto;
+    .title {
+      font-size: 30px;
+      letter-spacing: 0.2em;
+      @media (max-width: 1000px) {
+        font-size: 26px;
+      }
+    }
+    .sub_title {
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+      color: var(--color-tertiary);
+    }
+  }
+}

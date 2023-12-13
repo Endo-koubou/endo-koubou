@@ -1,0 +1,58 @@
+.vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.h1 {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+
+.h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--color-secondary);
+  line-height: 1;
+  letter-spacing: 0.2em;
+}
+
+.h3 {
+  font-size: 18px;
+  color: var(--color-secondary);
+  line-height: 1;
+}
+
+.h4 {
+  font-size: 16px;
+  color: var(--color-secondary);
+  letter-spacing: 0.1em;
+}
+
+.p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 1000px) {
+  .h1 {
+    font-size: 28px;
+  }
+
+  .h2 {
+    font-size: 20px;
+  }
+
+  .h3 {
+    font-size: 16px;
+  }
+
+  .p {
+    font-size: 14px;
+  }
+
+  .span {
+    font-size: 14px;
+  }
+}

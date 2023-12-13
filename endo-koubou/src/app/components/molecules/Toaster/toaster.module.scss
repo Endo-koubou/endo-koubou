@@ -1,0 +1,46 @@
+.toaster {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  padding: var(--space-2) var(--space-7) 10px;
+  border-radius: 6px;
+
+  animation: fadeInOutUp 5s ease-in-out;
+  opacity: 0;
+  > span {
+    font-size: 14px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+}
+
+.success {
+  color: var(--color-success);
+  background: #eef4ee;
+  border: 1px solid var(--color-success);
+}
+
+.error {
+  color: var(--color-attention);
+  background: #ffe5e5;
+  border: 1px solid var(--color-attention);
+}
+
+@keyframes fadeInOutUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  30% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+}

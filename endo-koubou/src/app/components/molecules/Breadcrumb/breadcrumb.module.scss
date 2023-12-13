@@ -1,0 +1,24 @@
+.wrapper {
+  background: var(--color-base);
+  padding: 0 0 var(--space-2);
+  margin: var(--space-l) 0 0;
+  @media (max-width: 1000px) {
+    margin: var(--space-10) 0 0;
+  }
+}
+
+.breadcrumb {
+  width: var(--w-contents);
+  margin: 0 auto;
+  ol {
+    display: flex;
+    li {
+      font-size: 14px;
+      &:not(:last-child)::after {
+        content: "/";
+        display: inline-block;
+        padding: 0 var(--space-3);
+      }
+    }
+  }
+}

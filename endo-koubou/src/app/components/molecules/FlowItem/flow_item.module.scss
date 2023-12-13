@@ -1,0 +1,120 @@
+.contents {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-7);
+  margin-bottom: 30px;
+  @media (max-width: 1000px) {
+    align-items: flex-start;
+    gap: var(--space-6);
+  }
+}
+
+.not_last_item {
+  &::before {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: "";
+    width: 45px;
+    height: 30px;
+    border-right: 1px solid var(--color-secondary);
+  }
+  @media (max-width: 1000px) {
+    &::before {
+      top: 60px;
+      width: 32.5px;
+      height: 120px;
+    }
+  }
+}
+
+.icon_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-base);
+  width: 90px;
+  height: 90px;
+  border: 1px solid var(--color-secondary);
+  border-radius: 1000px;
+  .mail {
+    font-size: 35px;
+  }
+  .document {
+    font-size: 36px;
+  }
+  .chat {
+    font-size: 40px;
+  }
+  .edit {
+    font-size: 32px;
+  }
+  .presen {
+    font-size: 34px;
+  }
+  .check {
+    font-size: 35px;
+  }
+  @media (max-width: 1000px) {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    svg {
+      width: 100px;
+    }
+    .mail {
+      font-size: 24px;
+    }
+    .document {
+      font-size: 26px;
+    }
+    .chat {
+      font-size: 26px;
+    }
+    .edit {
+      font-size: 24px;
+    }
+    .presen {
+      font-size: 24px;
+    }
+    .check {
+      font-size: 26px;
+    }
+  }
+}
+
+.text_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  p {
+    white-space: nowrap;
+  }
+  span {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: var(--color-tertiary);
+    margin-right: var(--space-2);
+  }
+  @media (max-width: 1000px) {
+    padding: var(--space-1) 0 0;
+    gap: var(--space-3);
+    p {
+      width: 100%;
+      white-space: normal;
+    }
+    span {
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      color: var(--color-tertiary);
+      margin-right: 0;
+      margin-bottom: var(--space-2);
+    }
+    .step {
+      display: block;
+    }
+  }
+}

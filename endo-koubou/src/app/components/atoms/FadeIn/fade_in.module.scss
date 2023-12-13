@@ -1,0 +1,29 @@
+.box {
+  opacity: 0;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.up {
+  transform: translateY(50%);
+}
+
+.fade_in {
+  opacity: 1;
+}
+
+.fade_up {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.delay_1 {
+  transition-delay: 0.5s;
+}
+
+.delay_2 {
+  transition-delay: 1s;
+}
+
+.delay_3 {
+  transition-delay: 1.5s;
+}

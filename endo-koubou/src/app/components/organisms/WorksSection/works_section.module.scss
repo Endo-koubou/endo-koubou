@@ -1,0 +1,14 @@
+.contents {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  width: var(--w-contents);
+  margin: 40px auto 0;
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-10);
+    padding: 0 var(--space-5);
+  }
+}

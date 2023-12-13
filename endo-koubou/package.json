@@ -1,0 +1,31 @@
+{
+  "name": "endo-koubou",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "cd .. && husky install endo-koubou/.husky"
+  },
+  "dependencies": {
+    "@types/node": "20.5.9",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "axios": "^1.6.1",
+    "eslint": "8.48.0",
+    "eslint-config-next": "13.4.19",
+    "next": "^13.5.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.48.2",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.11.0",
+    "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0",
+    "sass": "^1.66.1"
+  }
+}
