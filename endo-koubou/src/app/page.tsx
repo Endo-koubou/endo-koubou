@@ -189,7 +189,12 @@ export default function Home() {
             ダイレクトメッセージよりお問い合わせいただくことも可能です。
           </Typography>
           <div className={styles.icons}>
-            <SnsButtons color="secondary" size="m" />
+            <SnsButtons
+              instagramId="elton_0914"
+              xId="hacouma0914"
+              color="secondary"
+              size="m"
+            />
           </div>
         </section>
       </main>

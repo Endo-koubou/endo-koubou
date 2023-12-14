@@ -26,7 +26,12 @@ export function Footer() {
         <div className={styles.right_contents}>
           {isPc && (
             <div className={styles.icons}>
-              <SnsButtons color="base" size="s" />
+              <SnsButtons
+                instagramId="elton_0914"
+                xId="hacouma0914"
+                color="base"
+                size="s"
+              />
             </div>
           )}
           <nav>
