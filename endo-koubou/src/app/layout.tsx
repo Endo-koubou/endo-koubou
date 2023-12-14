@@ -4,6 +4,7 @@ import { Noto_Sans_JP } from "next/font/google";
 import { Footer, Header } from "@/app/components/organisms";
 import Template from "./template";
 import styles from "./layout.module.scss";
+import { Toaster } from "react-hot-toast";
 
 const notoSansJp = Noto_Sans_JP({
   weight: ["400", "500"],
@@ -32,7 +33,7 @@ export default function RootLayout({
         <Template>
           <Header />
         </Template>
-        {children}
+        {children} <Toaster />
         <Footer />
       </body>
     </html>
