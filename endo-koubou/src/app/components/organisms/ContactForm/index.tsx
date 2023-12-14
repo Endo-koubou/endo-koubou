@@ -79,6 +79,24 @@ export function ContactForm() {
       <div>
         <label>
           <Typography variant="h4">
+            件名または演目名<span className={styles.required}>(必須)</span>
+          </Typography>
+          <input
+            id="title"
+            type="text"
+            {...register("title")}
+            placeholder="例）制作の依頼 /『○○群像劇』など"
+            disabled={isDisable}
+            required
+            className={`${styles.input_text}  ${
+              isDisable ? styles.cursor_wait : ""
+            }`}
+          />
+        </label>
+      </div>
+      <div>
+        <label>
+          <Typography variant="h4">
             所属団体<span className={styles.optional}>(任意)</span>
           </Typography>
           <input
@@ -90,6 +108,32 @@ export function ContactForm() {
               isDisable ? styles.cursor_wait : ""
             }`}
           />
+        </label>
+      </div>
+      <div>
+        <label>
+          <Typography variant="h4">
+            仕込み日 ~ バラシ日<span className={styles.optional}>(任意)</span>
+          </Typography>
+          <div className={styles.date_inputs}>
+            <input
+              type="date"
+              {...register("date_start")}
+              disabled={isDisable}
+              className={`${styles.input_date}  ${
+                isDisable ? styles.cursor_wait : ""
+              }`}
+            />
+            <Typography variant="span">~</Typography>
+            <input
+              type="date"
+              {...register("date_end")}
+              disabled={isDisable}
+              className={`${styles.input_date}  ${
+                isDisable ? styles.cursor_wait : ""
+              }`}
+            />
+          </div>
         </label>
       </div>
       <div>
@@ -132,7 +176,10 @@ export function ContactForm() {
           isDisable ? styles.cursor_wait : ""
         }`}
       >
-        <ContactButton label="送信する" isDisable={isDisable} />
+        <ContactButton
+          label={isDisable ? "送信中..." : "送信する"}
+          isDisable={isDisable}
+        />
       </div>
     </form>
   );

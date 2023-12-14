@@ -27,6 +27,23 @@
       background: var(--color-base);
     }
   }
+  .date_inputs {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: var(--space-2);
+  }
+  .input_date {
+    width: 138px;
+    padding: 5.5px var(--space-2);
+    color: var(--color-secondary);
+    border: 1px solid var(--color-secondary);
+    border-radius: 4px;
+    @media (max-width: 1000px) {
+      width: 100%;
+      font-size: 14px;
+    }
+  }
   .input_text {
     width: 300px;
     padding: var(--space-2);
