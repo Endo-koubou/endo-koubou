@@ -2,7 +2,7 @@ import "./typography.module.scss";
 import styles from "./typography.module.scss";
 
 type TypographyProps = {
-  variant: "h1" | "h2" | "h3" | "h4" | "p" | "span";
+  variant: "h1" | "h2" | "h3" | "h4" | "h5" | "p" | "span";
   children: React.ReactNode;
   vertical?: boolean;
   className?: string;
@@ -38,6 +38,12 @@ export function Typography({
     case "h4":
       return (
         <h4 className={`${styles[classVertical]} ${styles.h4} ${className}`}>
+          {children}
+        </h4>
+      );
+    case "h5":
+      return (
+        <h4 className={`${styles[classVertical]} ${styles.h5} ${className}`}>
           {children}
         </h4>
       );
