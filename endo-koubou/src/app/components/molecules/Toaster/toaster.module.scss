@@ -12,6 +12,13 @@
     line-height: 1;
     white-space: nowrap;
   }
+  @media (max-width: 1000px) {
+    width: 90%;
+    > span {
+      font-size: 12px;
+      white-space: normal;
+    }
+  }
 }
 
 .success {
