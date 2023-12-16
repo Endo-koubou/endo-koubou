@@ -4,10 +4,24 @@ import { toast } from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import { Typography } from "@/app/components/atoms";
 import { Toaster, ContactButton } from "@/app/components/molecules";
+import { DateUtils } from "@/app/util/formatDate";
 import styles from "./contact_form.module.scss";
 
 export function ContactForm() {
-  const { register, handleSubmit } = useForm();
+  const today = DateUtils.getCurrentDateFormatted();
+  const { register, handleSubmit } = useForm({
+    mode: "onSubmit",
+    defaultValues: {
+      name: "",
+      email: "",
+      title: "",
+      group: "",
+      date_start: today,
+      date_end: today,
+      inquiryType: "制作の依頼、お見積もり",
+      message: "",
+    },
+  });
   const [isDisable, setIsDisable] = useState<boolean>(false);
 
   const onSubmit = handleSubmit(async (data) => {
@@ -42,7 +56,7 @@ export function ContactForm() {
     >
       <div>
         <label>
-          <Typography variant="h4">
+          <Typography variant="h5">
             お名前<span className={styles.required}>(必須)</span>
           </Typography>
           <input
@@ -60,7 +74,7 @@ export function ContactForm() {
       </div>
       <div>
         <label>
-          <Typography variant="h4">
+          <Typography variant="h5">
             メールアドレス<span className={styles.required}>(必須)</span>
           </Typography>
           <input
@@ -78,7 +92,7 @@ export function ContactForm() {
       </div>
       <div>
         <label>
-          <Typography variant="h4">
+          <Typography variant="h5">
             件名または演目名<span className={styles.required}>(必須)</span>
           </Typography>
           <input
@@ -96,7 +110,7 @@ export function ContactForm() {
       </div>
       <div>
         <label>
-          <Typography variant="h4">
+          <Typography variant="h5">
             所属団体<span className={styles.optional}>(任意)</span>
           </Typography>
           <input
@@ -112,7 +126,7 @@ export function ContactForm() {
       </div>
       <div>
         <label>
-          <Typography variant="h4">
+          <Typography variant="h5">
             仕込み日 ~ バラシ日<span className={styles.optional}>(任意)</span>
           </Typography>
           <div className={styles.date_inputs}>
@@ -138,7 +152,7 @@ export function ContactForm() {
       </div>
       <div>
         <label>
-          <Typography variant="h4">
+          <Typography variant="h5">
             お問い合わせ種別<span className={styles.required}>(必須)</span>
           </Typography>
           <select
@@ -158,7 +172,7 @@ export function ContactForm() {
       </div>
       <div>
         <label>
-          <Typography variant="h4">
+          <Typography variant="h5">
             お問い合わせ内容をご記載ください
             <span className={styles.required}>(必須)</span>
           </Typography>
