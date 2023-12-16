@@ -11,12 +11,14 @@ export interface Work {
   date: string;
   companyName: string;
   theaterName: string;
+  performanceStart: string;
+  performanceEnd: string;
   director: string;
   lightingDesigner: string;
-  archiveImages: ImageData[];
-  productionImages: ImageData[];
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
   revisedAt: string;
+  archiveImages?: ImageData[];
+  productionImages?: ImageData[];
 }
