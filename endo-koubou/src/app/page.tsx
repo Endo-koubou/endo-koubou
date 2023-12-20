@@ -93,7 +93,16 @@ export default function Home() {
               <div className={styles.relative_box}>
                 <div className={styles.right_contents}>
                   <Typography variant="p">
-                    軽い会社説明。〜〜年に設立して低コストながらもクオリティが高い作品が売りです等のテキストが入ります
+                    2015年に設立。
+                    <br />
+                    ENDOが大学時代に立ち上げ、当時は1/3の面積だったものの、徐々に拡張し現在に至ります。
+                  </Typography>
+                  <Typography variant="p" className={styles.company_text}>
+                    工房内面積：間口8.1m×奥行き3.6m
+                    <br />
+                    稼働時間：9:00〜21:00(土日のみ)
+                    <br />
+                    最寄駅：JR阪和線 富木駅から徒歩15分
                   </Typography>
                   {!isPc && (
                     <Image

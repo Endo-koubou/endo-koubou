@@ -96,10 +96,13 @@
     position: absolute;
     right: 0;
     width: 40%;
-    padding: var(--space-l) 0 var(--space-10);
+    padding: var(--space-m) 0 var(--space-10);
+    .company_text {
+      margin: var(--space-2) 0 0;
+    }
     .button {
       text-align: right;
-      margin-top: 140px;
+      margin-top: 104px;
       @media (max-width: 1000px) {
         margin-top: var(--space-10);
       }
@@ -107,7 +110,7 @@
     @media (max-width: 1000px) {
       position: unset;
       width: 100%;
-      padding: var(--space-10) 0;
+      padding: var(--space-6) 0;
       img {
         width: 100%;
         height: 100%;
@@ -118,7 +121,7 @@
   .bg {
     position: absolute;
     width: 48vw;
-    height: 292px;
+    height: 372px;
     background: var(--color-primary);
     top: 146px;
     right: -7%;
@@ -143,7 +146,6 @@
   }
   @media (max-width: 1000px) {
     display: block;
-    // width: var(--w-contents);
     padding: 0 var(--space-6);
     margin: var(--space-m) auto 0;
     .sub_title {
