@@ -7,9 +7,21 @@ import { Toaster, ContactButton } from "@/app/components/molecules";
 import { DateUtils } from "@/app/util/formatDate";
 import styles from "./contact_form.module.scss";
 
+interface FormValues {
+  name: string;
+  email: string;
+  title: string;
+  group: string;
+  date_start: string;
+  date_end: string;
+  no_time?: boolean;
+  inquiry_type: string;
+  message: string;
+}
+
 export function ContactForm() {
   const today = DateUtils.getCurrentDateFormatted();
-  const { register, handleSubmit } = useForm({
+  const { register, handleSubmit, watch } = useForm({
     mode: "onSubmit",
     defaultValues: {
       name: "",
@@ -18,14 +30,23 @@ export function ContactForm() {
       group: "",
       date_start: today,
       date_end: today,
-      inquiryType: "制作の依頼、お見積もり",
+      no_time: false,
+      inquiry_type: "制作の依頼、お見積もり",
       message: "",
     },
   });
   const [isDisable, setIsDisable] = useState<boolean>(false);
+  const isNoTimeChecked = watch("no_time");
 
-  const onSubmit = handleSubmit(async (data) => {
+  const onSubmit = handleSubmit(async (data: FormValues) => {
     setIsDisable(true);
+
+    if (data.no_time) {
+      data.date_start = "指定なし";
+      data.date_end = "指定なし";
+    }
+    delete data.no_time;
+
     try {
       await fetch(`${process.env.NEXT_PUBLIC_HYPERFORM_END_POINT}`, {
         method: "POST",
@@ -44,8 +65,10 @@ export function ContactForm() {
           message="送信に失敗しました。しばらく待ってから再度お試しください。"
         />
       );
+      return;
+    } finally {
+      setIsDisable(false);
     }
-    setIsDisable(false);
   });
 
   return (
@@ -127,27 +150,40 @@ export function ContactForm() {
       <div>
         <label>
           <Typography variant="h5">
-            仕込み日 ~ バラシ日<span className={styles.optional}>(任意)</span>
+            仕込み日 ~ バラし日<span className={styles.optional}>(任意)</span>
           </Typography>
           <div className={styles.date_inputs}>
             <input
               type="date"
               {...register("date_start")}
-              disabled={isDisable}
+              disabled={isDisable ? isDisable : isNoTimeChecked}
               className={`${styles.input_date}  ${
                 isDisable ? styles.cursor_wait : ""
-              }`}
+              } ${isNoTimeChecked ? styles.no_time : ""}`}
             />
             <Typography variant="span">~</Typography>
             <input
               type="date"
               {...register("date_end")}
-              disabled={isDisable}
+              disabled={isDisable ? isDisable : isNoTimeChecked}
               className={`${styles.input_date}  ${
                 isDisable ? styles.cursor_wait : ""
-              }`}
+              } ${isNoTimeChecked ? styles.no_time : ""}`}
             />
           </div>
+        </label>
+
+        <label htmlFor="no_time" className={styles.no_time_wrapper}>
+          <input
+            id="no_time"
+            type="checkbox"
+            {...register("no_time")}
+            disabled={isDisable}
+            className={`${styles.input_check}  ${
+              isDisable ? styles.cursor_wait : ""
+            }`}
+          />
+          <Typography variant="span">日程を指定しない</Typography>
         </label>
       </div>
       <div>
@@ -156,8 +192,8 @@ export function ContactForm() {
             お問い合わせ種別<span className={styles.required}>(必須)</span>
           </Typography>
           <select
-            id="inquiryType"
-            {...register("inquiryType")}
+            id="inquiry_type"
+            {...register("inquiry_type")}
             disabled={isDisable}
           >
             <option value="制作の依頼、お見積もり">
