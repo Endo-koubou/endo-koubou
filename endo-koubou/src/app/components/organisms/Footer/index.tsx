@@ -75,7 +75,12 @@ export function Footer() {
           {!isPc && (
             <>
               <div className={styles.icons}>
-                <SnsButtons color="base" size="s" />
+                <SnsButtons
+                  instagramId="elton_0914"
+                  xId="hacouma0914"
+                  color="base"
+                  size="s"
+                />
               </div>
               <Typography variant="p" className={styles.text}>
                 舞台美術をもっと身近に
