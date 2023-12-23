@@ -45,6 +45,12 @@
     left: 0;
     z-index: var(--z-index-0);
   }
+  .works_image {
+    object-fit: contain;
+    position: relative !important;
+    width: 100% !important;
+    vertical-align: top;
+  }
   .button {
     display: flex;
     justify-content: center;

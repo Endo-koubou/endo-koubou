@@ -60,7 +60,56 @@ export default function Home() {
               </FadeIn>
             </>
           ) : (
-            <></>
+            <>
+              <FadeIn fadeType="up">
+                <Image
+                  src="/images/topWorks/sp_01.jpg"
+                  alt={`work 1`}
+                  fill
+                  className={styles.works_image}
+                />
+              </FadeIn>
+              <FadeIn fadeType="up">
+                <Image
+                  src="/images/topWorks/sp_02.jpg"
+                  alt={`work 2`}
+                  fill
+                  className={styles.works_image}
+                />
+              </FadeIn>
+              <FadeIn fadeType="up">
+                <Image
+                  src="/images/topWorks/sp_03.jpg"
+                  alt={`work 3`}
+                  fill
+                  className={styles.works_image}
+                />
+              </FadeIn>
+              <FadeIn fadeType="up">
+                <Image
+                  src="/images/topWorks/sp_04.jpg"
+                  alt={`work 4`}
+                  fill
+                  className={styles.works_image}
+                />
+              </FadeIn>
+              <FadeIn fadeType="up">
+                <Image
+                  src="/images/topWorks/sp_05.jpg"
+                  alt={`work 5`}
+                  fill
+                  className={styles.works_image}
+                />
+              </FadeIn>
+              <FadeIn fadeType="up">
+                <Image
+                  src="/images/topWorks/sp_06.jpg"
+                  alt={`work 6`}
+                  fill
+                  className={styles.works_image}
+                />
+              </FadeIn>
+            </>
           )}
           <div className={styles.button}>
             <TransButton label="もっとみる" direction="next" path="/works" />
