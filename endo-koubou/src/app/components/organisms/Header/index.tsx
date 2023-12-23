@@ -31,6 +31,7 @@ export function Header() {
     if (!isTop) {
       return;
     } else {
+      setShowHeader(false);
       const handleScroll = () => {
         const currentScrollY = window.scrollY;
         if (currentScrollY > 455) {
