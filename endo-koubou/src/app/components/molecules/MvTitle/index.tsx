@@ -3,7 +3,7 @@ import styles from "./mv_title.module.scss";
 
 export function MvTitle() {
   return (
-    <Typography variant="h1">
+    <Typography variant="h1" className={styles.title}>
       <FadeIn fadeType="up" delay={2}>
         舞台美術を
       </FadeIn>
