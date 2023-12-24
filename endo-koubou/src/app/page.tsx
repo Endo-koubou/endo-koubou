@@ -40,22 +40,20 @@ export default function Home() {
           </div>
           {isPc ? (
             <>
-              <FadeIn delay={1} fadeType="up">
-                <div
-                  style={{
-                    width: "100%",
-                    height: "325px",
-                    background: "#5e5e5e",
-                  }}
+              <FadeIn fadeType="up">
+                <Image
+                  src="/images/topWorks/pc_01.jpg"
+                  alt={`work 1`}
+                  fill
+                  className={styles.works_image}
                 />
               </FadeIn>
-              <FadeIn delay={1} fadeType="up">
-                <div
-                  style={{
-                    width: "100%",
-                    height: "325px",
-                    background: "#5e5e5e",
-                  }}
+              <FadeIn fadeType="up">
+                <Image
+                  src="/images/topWorks/pc_02.jpg"
+                  alt={`work 1`}
+                  fill
+                  className={styles.works_image}
                 />
               </FadeIn>
             </>
