@@ -20,6 +20,12 @@ export const metadata: Metadata = {
   description:
     "関西を中心に舞台美術の制作活動を行なっている、ENDO工房の公式Webサイトです。",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  robots: {
+    index: false,
+    googleBot: {
+      index: false,
+    },
+  },
 };
 
 export default function RootLayout({
