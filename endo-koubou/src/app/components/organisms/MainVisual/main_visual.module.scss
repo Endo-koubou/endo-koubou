@@ -23,13 +23,6 @@
     animation: zoomAnimation 3s;
   }
 
-  .slide_image {
-    object-fit: contain;
-    position: relative !important;
-    width: 100% !important;
-    vertical-align: top;
-  }
-
   .activeSlide {
     opacity: 1;
     z-index: var(--z-index-2);

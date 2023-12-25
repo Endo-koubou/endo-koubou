@@ -21,7 +21,6 @@ const images_sp = [
 ];
 
 export function MainVisual() {
-  const [isLoadedFirstImage, setIsLoadedFirstImage] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const isPc = useResponsive("pc");
 
@@ -32,63 +31,55 @@ export function MainVisual() {
     return () => clearTimeout(timer);
   }, [currentSlide]);
 
-  const handleImageLoad = () => {
-    setIsLoadedFirstImage(true);
-  };
-
   return (
     <section className={styles.mv} style={{ height: "100vh" }}>
-      {isLoadedFirstImage && (
-        <>
-          <div className={styles.title}>
-            <FadeIn fadeType="in">
+      <div className={styles.title}>
+        <FadeIn fadeType="in">
+          <Image
+            src="/images/logo_endo-koubou.png"
+            width={75}
+            height={68}
+            alt="ENDO工房のロゴ画像"
+            className={styles.logo}
+          />
+        </FadeIn>
+        <MvTitle />
+      </div>
+      {isPc
+        ? images_pc.map((image, index) => (
+            <div
+              key={image}
+              className={`${
+                index === currentSlide
+                  ? styles.activeSlide
+                  : styles.inactiveSlide
+              } ${styles.mv_pc}`}
+            >
               <Image
-                src="/images/logo_endo-koubou.png"
-                width={75}
-                height={68}
-                alt="ENDO工房のロゴ画像"
-                className={styles.logo}
+                src={image}
+                alt={`Slide ${index + 1}`}
+                layout="fill"
+                objectFit="cover"
               />
-            </FadeIn>
-            <MvTitle />
-          </div>
-          {isPc
-            ? images_pc.map((image, index) => (
-                <div
-                  key={image}
-                  className={`${
-                    index === currentSlide
-                      ? styles.activeSlide
-                      : styles.inactiveSlide
-                  } ${styles.mv_pc}`}
-                >
-                  <Image
-                    src={image}
-                    alt={`Slide ${index + 1}`}
-                    className={styles.slide_image}
-                    onLoadingComplete={handleImageLoad}
-                  />
-                </div>
-              ))
-            : images_sp.map((image, index) => (
-                <div
-                  key={image}
-                  className={`${
-                    index === currentSlide
-                      ? styles.activeSlide
-                      : styles.inactiveSlide
-                  } ${styles.mv_sp}`}
-                >
-                  <Image
-                    src={image}
-                    alt={`Slide ${index + 1}`}
-                    className={styles.slide_image}
-                    onLoadingComplete={handleImageLoad}
-                  />
-                </div>
-              ))}
-        </>
-      )}
+            </div>
+          ))
+        : images_sp.map((image, index) => (
+            <div
+              key={image}
+              className={`${
+                index === currentSlide
+                  ? styles.activeSlide
+                  : styles.inactiveSlide
+              } ${styles.mv_sp}`}
+            >
+              <Image
+                src={image}
+                alt={`Slide ${index + 1}`}
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
+          ))}
     </section>
   );
 }
