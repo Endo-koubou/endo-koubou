@@ -47,3 +47,13 @@
     display: block;
   }
 }
+
+.cover_image {
+  object-fit: cover !important;
+  position: relative !important;
+  width: 100% !important;
+}
+
+.preload_image {
+  opacity: 0;
+}
