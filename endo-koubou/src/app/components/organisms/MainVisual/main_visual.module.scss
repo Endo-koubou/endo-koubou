@@ -9,6 +9,9 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: var(--z-index-3);
+    @media (max-width: 1000px) {
+      top: 28%;
+    }
     .logo {
       margin-bottom: var(--space-8);
     }
