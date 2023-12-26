@@ -64,13 +64,19 @@
     gap: var(--space-6);
     overflow-x: auto;
     flex-shrink: 0;
-    .image {
+    .image_box {
       position: relative;
       width: 384px;
       height: 216px;
       @media (max-width: 1000px) {
-        width: 256px;
-        height: 144px;
+        width: 292px;
+        height: 180px;
+      }
+      .image {
+        object-fit: cover !important;
+        position: relative !important;
+        width: 100% !important;
+        vertical-align: top;
       }
     }
   }

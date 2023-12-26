@@ -64,11 +64,12 @@ export function WorkDetailSection({ detail, className }: WorksSectionProps) {
             <>
               <div className={styles.images}>
                 {detail.archiveImages.map((imageData, index) => (
-                  <div key={index} className={styles.image}>
+                  <div key={index} className={styles.image_box}>
                     <Image
                       src={imageData.url}
-                      layout="fill"
+                      fill
                       alt={`資料画像${index + 1}`}
+                      className={styles.image}
                     />
                   </div>
                 ))}
@@ -86,11 +87,12 @@ export function WorkDetailSection({ detail, className }: WorksSectionProps) {
             <>
               <div className={styles.images}>
                 {detail.productionImages.map((imageData, index) => (
-                  <div key={index} className={styles.image}>
+                  <div key={index} className={styles.image_box}>
                     <Image
                       src={imageData.url}
-                      layout="fill"
+                      fill
                       alt={`制作風景${index + 1}`}
+                      className={styles.image}
                     />
                   </div>
                 ))}
