@@ -16,8 +16,8 @@ const notoSansJp = Noto_Sans_JP({
 const siteName = "ENDO工房";
 const description =
   "関西を中心に舞台美術の制作活動を行なっている、ENDO工房の公式Webサイトです。";
-const url = "https://endo-koubou.com";
-const imageUrl = "https://endo-koubou.com/images/og/opengraph-image.jpg";
+const url = "https://endo-koubou.com/";
+const imageUrl = "https://endo-koubou.com/images/og/opengraph-image.jpg/";
 
 export const metadata: Metadata = {
   title: {
