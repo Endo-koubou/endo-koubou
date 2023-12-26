@@ -16,6 +16,7 @@ const siteName = "ENDO工房";
 const description =
   "関西を中心に舞台美術の制作活動を行なっている、ENDO工房の公式Webサイトです。";
 const url = "https://endo-koubou.com";
+const imageUrl = "https://endo-koubou.com/opengraph-image.jpg";
 
 export const metadata: Metadata = {
   title: {
@@ -32,6 +33,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: siteName,
+    images: imageUrl,
     description,
     url,
     siteName,
@@ -41,6 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: siteName,
+    images: imageUrl,
     description,
     site: "@elton_0914",
     creator: "@elton_0914",
