@@ -5,6 +5,7 @@ import { Footer, Header } from "@/app/components/organisms";
 import Template from "./template";
 import styles from "./layout.module.scss";
 import { Toaster } from "react-hot-toast";
+export const dynamic = "force-dynamic";
 
 const notoSansJp = Noto_Sans_JP({
   weight: ["400", "500"],
