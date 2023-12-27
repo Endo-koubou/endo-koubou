@@ -11,8 +11,8 @@ export interface Work {
   date: string;
   companyName: string;
   theaterName: string;
-  performanceStart: string;
-  performanceEnd: string;
+  performancePeriod: string;
+  creater: string;
   director: string;
   lightingDesigner: string;
   createdAt: string;
