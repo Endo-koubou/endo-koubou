@@ -28,17 +28,15 @@ export function WorkCard({
 }: WorkCardProps) {
   return (
     <div className={styles.card}>
-      <Link href={`/works/${id}`}>
-        <Image
-          src={imageData.url}
-          width={imageData.width}
-          height={imageData.height}
-          alt={alt}
-          style={{ width: "100%", height: "auto" }}
-        />
-        <Typography variant="h3" className={styles.title}>
-          {title}
-        </Typography>
+      <Link href={`/works/${id}`} className={styles.link_area}>
+        <div className={styles.image_area}>
+          <Image src={imageData.url} fill alt={alt} className={styles.image} />
+        </div>
+        <div className={styles.title_area}>
+          <Typography variant="h3" className={styles.title}>
+            {title}
+          </Typography>
+        </div>
         <Typography variant="span" className={styles.date}>
           {companyName} / {date.substr(0, 4)}年
         </Typography>
