@@ -38,11 +38,11 @@ export function WorkDetailSection({ detail, className }: WorksSectionProps) {
               <dt>
                 <Typography variant="h4">公演期間</Typography>
               </dt>
-              <dd>
-                {DateUtils.toYearMonthFormat(detail.performanceStart)}
-                {" ~ "}
-                {DateUtils.toYearMonthFormat(detail.performanceEnd)}
-              </dd>
+              <dd>{DateUtils.toYearMonthFormat(detail.performancePeriod)}</dd>
+              <dt>
+                <Typography variant="h4">作者</Typography>
+              </dt>
+              <dd>{detail.creater}</dd>
               <dt>
                 <Typography variant="h4">演出家</Typography>
               </dt>
