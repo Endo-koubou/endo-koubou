@@ -26,12 +26,6 @@ export const metadata: Metadata = {
   },
   description: description,
   viewport: "width=device-width, initial-scale=1, maximum-scale=1",
-  robots: {
-    index: false,
-    googleBot: {
-      index: false,
-    },
-  },
   openGraph: {
     title: siteName,
     images: {
