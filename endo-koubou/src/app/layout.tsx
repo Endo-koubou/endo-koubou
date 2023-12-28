@@ -1,4 +1,5 @@
 import "./globals.scss";
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import { Footer, Header } from "@/app/components/organisms";
@@ -58,7 +59,9 @@ export default function RootLayout({
         <Template>
           <Header />
         </Template>
-        {children} <Toaster />
+        {children}
+        <Toaster />
+        <Analytics />
         <Footer />
       </body>
     </html>
