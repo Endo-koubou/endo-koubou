@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Works() {
-  const data = await getWorks();
+  const data = await getWorks(50);
 
   return (
     <>
