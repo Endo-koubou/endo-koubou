@@ -20,7 +20,7 @@ export function CompanySection({
     <div className={`${styles.contents} ${className}`}>
       <section>
         <dl className={styles.info_data}>
-          <dt>社名</dt>
+          <dt>屋号</dt>
           <dd>{company.companyName}</dd>
           <dt>設立年</dt>
           <dd>{company.yearEstablished.substring(0, 4)}年</dd>

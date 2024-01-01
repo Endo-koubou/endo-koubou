@@ -118,12 +118,12 @@ export default function Home() {
           <div className={styles.relative_box}>
             <div className={styles.sub_title}>
               <Typography variant="h2" vertical>
-                会社概要
+                工房情報
                 <br />
                 スタッフ一覧
                 <br />
                 <span>
-                  <Typography variant="span">COMPANY</Typography>
+                  <Typography variant="span">ATELIER</Typography>
                 </span>
               </Typography>
             </div>

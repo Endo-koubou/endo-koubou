@@ -11,8 +11,8 @@ const menuMapping = [
   { label: "ホーム", subLabel: "HOME", path: "/", isPc: false },
   { label: "作品一覧", subLabel: "WORKS", path: "/works", isPc: true },
   {
-    label: "会社概要 & スタッフ一覧",
-    subLabel: "COMPANY",
+    label: "工房情報 & スタッフ一覧",
+    subLabel: "ATELIER",
     path: "/company",
     isPc: true,
   },

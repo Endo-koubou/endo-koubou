@@ -54,7 +54,7 @@ export function Footer() {
                     vertical={isPc}
                     className={styles.link}
                   >
-                    会社概要
+                    工房情報
                     {isPc && <br />}
                     &スタッフ一覧
                   </Typography>

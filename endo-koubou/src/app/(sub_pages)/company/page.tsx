@@ -6,7 +6,7 @@ import { CompanySection } from "@/app/components/organisms";
 import styles from "./page.module.scss";
 
 export const metadata: Metadata = {
-  title: "会社概要",
+  title: "工房情報",
 };
 
 export default async function Company() {
@@ -16,8 +16,8 @@ export default async function Company() {
   return (
     <>
       <div className={styles.head_contents}>
-        <Breadcrumb list={[{ label: "会社概要" }]} />
-        <PageTitle title="会社概要" subtitle="COMPANY" />
+        <Breadcrumb list={[{ label: "工房情報" }]} />
+        <PageTitle title="工房情報" subtitle="ATELIER" />
       </div>
       <CompanySection
         company={companyData}
