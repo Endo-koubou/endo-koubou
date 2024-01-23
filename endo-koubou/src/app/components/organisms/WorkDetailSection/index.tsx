@@ -20,8 +20,11 @@ export function WorkDetailSection({ detail, className }: WorksSectionProps) {
             width={detail.imageData.width}
             height={detail.imageData.height}
             alt={detail.title}
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: "100%", height: "auto", verticalAlign: "bottom" }}
           />
+          <div className={styles.concept}>
+            <Typography variant="p">{detail.concept}</Typography>
+          </div>
           <div className={styles.info}>
             <Typography variant="h3" className={styles.info_title}>
               作品詳細
