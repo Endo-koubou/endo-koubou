@@ -8,6 +8,7 @@ export interface Work {
   id: string;
   title: string;
   imageData: ImageData;
+  concept: string;
   date: string;
   companyName: string;
   theaterName: string;
