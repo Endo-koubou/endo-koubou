@@ -1,4 +1,5 @@
-import { Dispatch, SetStateAction, useState } from "react";
+"use client";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import styles from "./modal.module.scss";
 
 export type ModalProps = {
@@ -10,6 +11,16 @@ export type ModalProps = {
 
 export function Modal({ isShow, setIsShow, children, className }: ModalProps) {
   const modalClass = isShow ? "show" : "hidden";
+
+  useEffect(() => {
+    if (isShow) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+
+    return () => document.body.classList.remove("no-scroll");
+  }, [isShow]);
 
   return (
     <div
