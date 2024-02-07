@@ -41,7 +41,7 @@ export default async function WorkDetail(props: { params: { id: string } }) {
             { label: detail.title },
           ]}
         />
-        <PageTitle title={detail.title} />
+        <PageTitle title={detail.title} className={styles.detail_title} />
       </div>
       <WorkDetailSection detail={detail} />
     </>
