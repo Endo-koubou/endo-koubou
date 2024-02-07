@@ -9,6 +9,7 @@ import { PageTitle } from "./PageTitle";
 import { WorkCard } from "./WorkCard";
 import { Breadcrumb } from "./Breadcrumb";
 import { Toaster } from "./Toaster";
+import { ImageModal } from "./ImageModal";
 
 export {
   TransButton,
@@ -22,4 +23,5 @@ export {
   WorkCard,
   Breadcrumb,
   Toaster,
+  ImageModal,
 };

@@ -1,0 +1,33 @@
+.image {
+  opacity: 1;
+  transition: 0.3s;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+.modal_contents {
+  .icon_close {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.3);
+    transition: 0.3s;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
+  .modal_image {
+    position: fixed !important;
+    display: block;
+    inset: 0;
+    margin: auto;
+    width: 100% !important;
+    max-width: 90%;
+    height: unset !important;
+    max-height: 90dvh !important;
+  }
+}
