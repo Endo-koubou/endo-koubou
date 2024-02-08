@@ -21,7 +21,12 @@ export async function generateMetadata(props: {
       images: detailData.imageData.url,
     },
     twitter: {
+      card: "summary_large_image",
+      title: detailData.title,
       images: [detailData.imageData.url],
+      description: detailData.concept,
+      site: "@elton_0914",
+      creator: "@elton_0914",
     },
   };
 }
