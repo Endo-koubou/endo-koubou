@@ -22,7 +22,7 @@ export async function generateMetadata(props: {
     },
     twitter: {
       card: "summary_large_image",
-      title: detailData.title,
+      title: `ENDO工房｜${detailData.title}`,
       images: [detailData.imageData.url],
       description: detailData.concept,
       site: "@elton_0914",
