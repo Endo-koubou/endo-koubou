@@ -3,7 +3,7 @@
   padding: var(--space-10) 0;
   margin: 0 auto;
   @media (max-width: 1000px) {
-    padding: var(--space-5);
+    padding: 0 var(--space-5) var(--space-10);
   }
   .concept {
     margin: var(--space-8) 0;
@@ -56,7 +56,7 @@
 }
 
 .document_section {
-  margin: 0 0 var(--space-l);
+  margin: 0 0 var(--space-10);
   overflow: auto;
   .images {
     min-width: 100vw;
