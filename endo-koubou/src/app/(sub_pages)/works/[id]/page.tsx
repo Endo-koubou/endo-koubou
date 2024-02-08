@@ -2,8 +2,7 @@ import { getWorks } from "@/app/api/works";
 import { getWorkDetail } from "@/app/api/works/[id]";
 import { Breadcrumb, PageTitle } from "@/app/components/molecules";
 import { WorkDetailSection } from "@/app/components/organisms";
-import { ResolvingMetadata, Metadata } from "next";
-import { Props } from "next/script";
+import { Metadata } from "next";
 import styles from "./page.module.scss";
 
 export async function generateStaticParams() {
@@ -19,7 +18,10 @@ export async function generateMetadata(props: {
   return {
     title: detailData.title,
     openGraph: {
-      images: [`${detailData.imageData.url}`],
+      images: detailData.imageData.url,
+    },
+    twitter: {
+      images: [detailData.imageData.url],
     },
   };
 }
