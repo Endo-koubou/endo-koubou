@@ -12,10 +12,10 @@ type ImageData = {
 export type WorkCardProps = {
   id: string;
   title: string;
-  companyName: string;
-  date: string;
   imageData: ImageData;
   alt: string;
+  companyName?: string;
+  date?: string;
 };
 
 export function WorkCard({
@@ -37,9 +37,11 @@ export function WorkCard({
             {title}
           </Typography>
         </div>
-        <Typography variant="span" className={styles.date}>
-          {companyName} / {date.substr(0, 4)}年
-        </Typography>
+        {companyName && date && (
+          <Typography variant="span" className={styles.date}>
+            {companyName} / {date.substr(0, 4)}年
+          </Typography>
+        )}
       </Link>
     </div>
   );

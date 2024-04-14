@@ -38,6 +38,12 @@
       }
     }
   }
+  .private_info {
+    margin: var(--space-8) 0 0;
+    @media (max-1000px) {
+      margin: var(--space-8) 0;
+    }
+  }
 }
 
 .back_button {

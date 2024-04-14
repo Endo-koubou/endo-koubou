@@ -30,7 +30,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   const works = await getWorks();
-  const dynamicPaths = works.map((work) => {
+  const dynamicPaths = works.contents.map((work) => {
     return {
       url: `https://endo-koubou.com/${work.id}`,
       lastModified: new Date(),

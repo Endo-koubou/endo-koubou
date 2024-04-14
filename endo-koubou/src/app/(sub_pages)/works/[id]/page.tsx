@@ -7,7 +7,7 @@ import styles from "./page.module.scss";
 
 export async function generateStaticParams() {
   const works = await getWorks();
-  const detailPaths = works.map((work) => work.id);
+  const detailPaths = works.contents.map((work) => work.id);
   return detailPaths;
 }
 
