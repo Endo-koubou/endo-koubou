@@ -16,7 +16,6 @@ export function Pagination({
   totalPages,
   onPageChange,
 }: PaginationProps) {
-  totalPages = 20;
   const isSelectedFirst = currentPage === 1;
   const isSelectedLast = currentPage === totalPages;
   const isPc = useResponsive("pc");
