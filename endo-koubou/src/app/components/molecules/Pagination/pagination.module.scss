@@ -1,0 +1,27 @@
+.pagination {
+  display: flex;
+  gap: var(--space-2);
+  .pages_wrapper {
+    display: flex;
+    gap: var(--space-2);
+  }
+  .active {
+    background: var(--color-tertiary);
+    color: var(--color-base);
+  }
+}
+
+.button_base {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--color-tertiary);
+  &.disable {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

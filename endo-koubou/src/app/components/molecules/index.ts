@@ -10,6 +10,8 @@ import { WorkCard } from "./WorkCard";
 import { Breadcrumb } from "./Breadcrumb";
 import { Toaster } from "./Toaster";
 import { ImageModal } from "./ImageModal";
+import { Tabs } from "./Tabs";
+import { Pagination } from "./Pagination";
 
 export {
   TransButton,
@@ -24,4 +26,6 @@ export {
   Breadcrumb,
   Toaster,
   ImageModal,
+  Tabs,
+  Pagination,
 };
