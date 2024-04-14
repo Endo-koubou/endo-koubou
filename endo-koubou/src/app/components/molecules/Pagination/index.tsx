@@ -3,6 +3,7 @@ import React from "react";
 import { Button } from "@/app/components/atoms";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import styles from "./pagination.module.scss";
+import useResponsive from "@/app/hooks/useResponsive";
 
 export type PaginationProps = {
   currentPage: number;
@@ -15,24 +16,28 @@ export function Pagination({
   totalPages,
   onPageChange,
 }: PaginationProps) {
+  totalPages = 20;
   const isSelectedFirst = currentPage === 1;
   const isSelectedLast = currentPage === totalPages;
+  const isPc = useResponsive("pc");
 
   // ページネーションのボタンを生成（常に最大10個表示）
   const pagesButtonList = [];
   let startPage = 1;
   let endPage = totalPages;
 
-  // 11個以上のボタンがある場合
-  if (totalPages > 10) {
-    // 最初と最後から10以内の範囲が選択されている場合
-    if (currentPage <= 6) {
-      endPage = 10;
-    } else if (currentPage + 5 >= totalPages) {
-      startPage = totalPages - 9;
+  // Button range determination based on screen type
+  if (totalPages > (isPc ? 10 : 3)) {
+    // Define the number of buttons to display on each side of the current page
+    const sideButtonsCount = isPc ? 4 : 1; // 1 on each side for mobile, 4 for desktop
+
+    if (currentPage <= sideButtonsCount + 1) {
+      endPage = isPc ? 10 : 3; // Show the first few pages
+    } else if (currentPage + sideButtonsCount >= totalPages) {
+      startPage = totalPages - (isPc ? 9 : 2); // Show the last few pages
     } else {
-      startPage = currentPage - 4;
-      endPage = currentPage + 5;
+      startPage = currentPage - sideButtonsCount;
+      endPage = currentPage + sideButtonsCount;
     }
   }
 

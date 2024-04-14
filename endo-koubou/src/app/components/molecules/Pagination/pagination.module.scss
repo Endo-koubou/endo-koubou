@@ -20,6 +20,10 @@
   color: var(--color-secondary);
   border-radius: 8px;
   border: 1px solid var(--color-tertiary);
+  @media (max-width: 1000px) {
+    width: 36px;
+    height: 36px;
+  }
   &.disable {
     opacity: 0.5;
     pointer-events: none;
