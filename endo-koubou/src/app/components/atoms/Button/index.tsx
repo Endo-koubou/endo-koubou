@@ -2,7 +2,7 @@ import styles from "./button.module.scss";
 
 export type ButtonProps = {
   color?: "base" | "primary";
-  bgColor?: "primary" | "secondary";
+  bgColor?: "primary" | "secondary" | "tertiary";
   size?: "s" | "m" | "l";
   rounded?: boolean;
   isDisable?: boolean;
