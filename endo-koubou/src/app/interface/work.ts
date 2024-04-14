@@ -4,7 +4,7 @@ type ImageData = {
   height: number;
 };
 
-export type ProductionType = "舞台制作" | "個人制作";
+export type ProductionType = "舞台美術" | "個人製作";
 export interface WorksResponse {
   contents: Work[];
   totalCount: number;

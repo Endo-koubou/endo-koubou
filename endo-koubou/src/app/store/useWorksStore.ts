@@ -11,7 +11,7 @@ interface WorksState {
 const useWorksStore = create<WorksState>((set) => ({
   currentPage: 1,
   setCurrentPage: (page: number) => set(() => ({ currentPage: page })),
-  selectedTab: "舞台制作",
+  selectedTab: "舞台美術",
   setSelectedTab: (tab: ProductionType) => set(() => ({ selectedTab: tab })),
 }));
 

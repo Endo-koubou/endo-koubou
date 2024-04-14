@@ -12,7 +12,7 @@ export type WorksSectionProps = {
 };
 
 const PAGE_LIMIT = 12;
-const tabList: ProductionType[] = ["舞台制作", "個人制作"];
+const tabList: ProductionType[] = ["舞台美術", "個人製作"];
 
 export function WorksSection({ className }: WorksSectionProps) {
   const { currentPage, setCurrentPage, selectedTab, setSelectedTab } =

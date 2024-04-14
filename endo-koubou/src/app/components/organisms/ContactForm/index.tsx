@@ -31,7 +31,7 @@ export function ContactForm() {
       date_start: today,
       date_end: today,
       no_time: false,
-      inquiry_type: "制作の依頼、お見積もり",
+      inquiry_type: "製作の依頼、お見積もり",
       message: "",
     },
   });
@@ -122,7 +122,7 @@ export function ContactForm() {
             id="title"
             type="text"
             {...register("title")}
-            placeholder="例）制作の依頼 /『○○群像劇』など"
+            placeholder="例）製作の依頼 /『○○群像劇』など"
             disabled={isDisable}
             required
             className={`${styles.input_text}  ${
@@ -196,8 +196,8 @@ export function ContactForm() {
             {...register("inquiry_type")}
             disabled={isDisable}
           >
-            <option value="制作の依頼、お見積もり">
-              制作の依頼、お見積もり
+            <option value="製作の依頼、お見積もり">
+              製作の依頼、お見積もり
             </option>
             <option value="依頼前の相談、お見積もりなど">
               依頼前の相談、お見積もりなど

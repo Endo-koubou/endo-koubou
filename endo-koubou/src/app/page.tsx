@@ -178,7 +178,7 @@ export default function Home() {
         <section className={styles.flow}>
           <div className={styles.sub_title}>
             <Typography variant="h2" vertical={isPc && true}>
-              制作依頼のフロー
+              製作依頼のフロー
               <br />
               <Typography variant="span">FLOW</Typography>
             </Typography>

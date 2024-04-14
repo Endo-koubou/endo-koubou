@@ -23,7 +23,7 @@ export function WorkDetailSection({ detail, className }: WorksSectionProps) {
             alt={detail.title}
             style={{ width: "100%", height: "auto", verticalAlign: "bottom" }}
           />
-          {detail.productionGenre == "舞台制作" && (
+          {detail.productionGenre == "舞台美術" && (
             <>
               <div className={styles.concept}>
                 <Typography variant="p">{detail.concept}</Typography>
@@ -64,7 +64,7 @@ export function WorkDetailSection({ detail, className }: WorksSectionProps) {
             </>
           )}
 
-          {detail.productionGenre == "個人制作" && (
+          {detail.productionGenre == "個人製作" && (
             <>
               <div className={`${styles.info} ${styles.private_info}`}>
                 <Typography variant="h3" className={styles.info_title}>
@@ -86,7 +86,7 @@ export function WorkDetailSection({ detail, className }: WorksSectionProps) {
                     {`横幅: ${detail.width} / 高さ: ${detail.height} / 奥行き: ${detail.depth}`}
                   </dd>
                   <dt>
-                    <Typography variant="h4">制作期間</Typography>
+                    <Typography variant="h4">製作期間</Typography>
                   </dt>
                   <dd>{detail.productionPeriod}</dd>
                 </dl>
@@ -114,7 +114,7 @@ export function WorkDetailSection({ detail, className }: WorksSectionProps) {
       {detail.productionImages && detail.productionImages.length > 0 && (
         <>
           <Typography variant="h2" className={styles.document_title}>
-            制作風景
+            製作風景
           </Typography>
           <section className={styles.document_section}>
             <div className={styles.images}>
