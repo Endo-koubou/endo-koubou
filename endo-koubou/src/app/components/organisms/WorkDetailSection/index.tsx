@@ -72,7 +72,7 @@ export function WorkDetailSection({ detail, className }: WorksSectionProps) {
                 </Typography>
                 <dl className={styles.info_data}>
                   <dt>
-                    <Typography variant="h4">モチーフ</Typography>
+                    <Typography variant="h4">参考作品</Typography>
                   </dt>
                   <dd>{detail.motif}</dd>
                   <dt>
